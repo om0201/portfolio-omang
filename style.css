@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
 :root{
   --primary-color: #F59E0B;
   --off-white: #E5E7EB;
@@ -6,9 +6,9 @@
 }
 
 body {
-  font-family: 'Bree Serif', serif;
+  font-family: 'Quicksand', sans-serif;
   margin: auto;
-  max-width: 600px;
+  max-width: 660px;
 }
 
 hr {
@@ -22,7 +22,7 @@ hr {
 
 .container-center{
   max-width: 600px;
-  margin: auto;
+  /* margin: auto; */
 }
 
 /* links */
@@ -43,7 +43,7 @@ hr {
   border-radius: 0.5rem;
 }
 
-.section a:hover {
+.section  #hover:hover {
   color: var(--primary-color);
   background-color: black;
 }
@@ -66,12 +66,11 @@ hr {
   background-color: var(--primary-color);
   padding: 0.8rem;
   border-bottom-left-radius: 1.5rem;
-  margin: 0px !important;
 }
 
 .navigation .nav-brand {
-  font-weight: bolder;
-  font-size: 2.5rem;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .navigation .nav-pills {
@@ -80,12 +79,14 @@ hr {
 
 .navigation .link {
   color: black;   
-  font-size: 1.5rem;
+  font-size: 16px;
 }
 
 .navigation .link-active {
   font-weight: bold;
 }
+
+
 
 /* header */
 
@@ -94,7 +95,7 @@ hr {
 }
 
 .hero .hero-img {
-  max-width: 500px;
+  max-width: 280px;
   display: block;
   margin: auto;
 }
@@ -108,7 +109,7 @@ hr {
 /* sections */
 
 .section {
-  padding: 2rem;
+  padding: 1.5rem;
   display: block;
   
 }
@@ -141,4 +142,13 @@ hr {
 
 .footer ul {
   padding-inline-start: 0px;
+}
+
+/* Project Page  */
+#projects {
+  text-align: left;
+}
+
+.proj-margin-top {
+  margin-block-start: 5px;
 }
