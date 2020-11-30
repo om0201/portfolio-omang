@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet">
+  <title>Dummy Blog</title>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav style="padding: 0.8cm;" class="navigation container">
+    <div class="nav-brand">OMANG MOREKAR</div>
+  </nav>
+
+  <!-- Header -->
+  <header class="hero">
+    <img class="hero-img" src="b1.svg">
+  </header>
+
+  <!-- Content -->
+  <section>
+    <h1 class="heading h1">Semantics, Inline & Block elements in HTML</h1>
+    <small style="font-size: 0.5cm; font-family: 'Yellowtail', cursive;">20th November 2020</small>
+    <p class="content">The easiest way I could have written this blog was to put some code and explain what each line does. I personally feel though, that understanding the mechanics behind these things is very important. Only then one will be able to fine tune it for individual needs. So the clickbait title got you here, now keep reading and ask questions in comments if you have any.</p><br>
+
+    <!-- Code Snippet -->
+    <div class="snip">
+      <code>&lt;nav&gt;&lt;/nav&gt;</code>
+    </div>
+
+    <h2 class="heading">Why Chunking?</h2>
+    <p class="content">With the advent of JS frameworks and Single Page Apps(SPAs), more and more code, logic and libraries have moved towards user instead of being rendered on the server. This, on one side has improved user experience but on the other side has increased the total KBs/MBs getting downloaded in the browser and thus slowing the first paint. Webpack (or whichever build tool you use) bundles all the JS/CSS files needed by your app to run in one big file.<br><br> This was done with the belief that small files waste precious HTTP requests (as the browser can only do so many at parallel) and thus has its heart at the right place. However, as explained, with time the bundle just gets bigger and bigger. Solution is simple, when the build file is too big, it outweighs the performance gain of saving an additional HTTP request. At that time one needs to start breaking that file into pieces or CHUNKS, hence, the name chunking.</p><br>
+
+      <h2 class="heading">Why Versioning?</h2>
+    <p class="content">When a build is broken into chunks, change in one chunk doesn’t affect other. For example, change in login page will change the user-control chunk but not the app, or the libraries. However, without versioning user will have no idea where the changes are and thus, the browser will download everything on every download. We don’t want that. We want parts/chunks which are not changed to be taken from browser’s cache and only the changed parts to be downloaded.<br><br>
+
+      Simple solution is to do a hash of your chunk, i.e. the VERSION and append it on the file name. I will show you how to do that in a minute, and it’s very easy with the webpack plugins, but even if you want to do it without these tools, the idea is simple. Take a hash of the file > Append it to file name > Make sure that every time there’s a file change this process is repeated.
+      
+    </p><br>
+
+  </section>
+
+  <!-- Footer -->
+  <footer style="font-family: 'Quicksand', sans-serif;" class="footer">
+    <div class="footer-header">Connect with me on</div>
+    <ul class="list-non-bullet ">
+      <li class="list-item-inline"><a class="link" href="https://github.com/om0201">Github</a></li>
+      <li class="list-item-inline"><a class="link" href="https://twitter.com/omang_wd">Twitter</a></li>
+      <li class="list-item-inline"><a class="link" href="https://www.instagram.com/omang_0102/">Instagram</a></li>
+    </ul>
+  </footer>
+
+</body>
+</html>
